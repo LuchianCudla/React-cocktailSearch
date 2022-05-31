@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --darkGrey: rgba(56, 56, 56, 0.979);
+  --lightGrey: #d6d4d470;
+  --callToAction: #5152531e;
+}
+
+/******Text styles********/
+
+a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 0.9rem;
+  color: var(--darkGrey);
+}
+
+h3,
+h4,
+p {
+  text-transform: capitalize;
+}
+
+li {
+  list-style-type: none;
+}
+label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--darkGrey);
+}
+
+.logo {
+  color: black;
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: (--darkGrey);
+}
+
+/******General styles********/
+
+body {
+  background-color: var(--lightGrey);
+}
+
+.btn {
+  padding: 0.3rem 0.8rem;
+
+  background-color: var(--callToAction);
+  color: black;
+  border-radius: 10px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.cocktails-center {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.cocktail {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+.cocktail-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1rem;
+}
+
+.cocktail-footer a {
+  margin-top: 2rem;
+}
+.drink {
+  display: flex;
+  max-width: 90vw;
+}
+
+.drink img {
+  max-width: 350px;
+  padding: 0.5rem;
+}
+
+img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+
+input[type="text"] {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--callToAction);
+  background-color: transparent;
+  padding: 0.3rem;
+}
+
+.navbar {
+  padding: 0.5rem;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 12vh;
+  padding: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--darkGrey);
+}
+
+.section {
+  padding: 1.2rem;
+}
+
+.about-section p {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.section p {
+  font-size: 0.95rem;
+}
+
+span {
+  background-color: var(--lightGrey);
+  margin: 0.3rem;
+  font-size: 1.08rem;
+}
+
+.section-title {
+  text-align: center;
+  padding: 1rem;
+}
+.section-form {
+  margin: 1rem auto;
+  width: 30%;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.search-control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/******************Media Queries********************/
+
+@media screen and (max-width: 1024px) {
+  .cocktails-center {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .section-form {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .cocktails-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section-form {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cocktails-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  label {
+    font-size: 1rem;
+  }
+  .about-section p {
+    max-width: 100%;
+  }
+
+  .cocktails-center {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .drink {
+    flex-direction: column;
+  }
+
+  .drink img {
+    max-width: 100%;
+    padding: 0;
+  }
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .search-control label {
+    text-align: center;
+  }
+}
